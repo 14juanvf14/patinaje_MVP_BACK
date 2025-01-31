@@ -2,25 +2,32 @@ package com.poc.patinaje.models;
 
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
-@Data
-@Builder
+@Entity
+@Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
+@Data
+@SuperBuilder
+@NoArgsConstructor
 public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private Long id;
 
-    String name;
-    String email;
-    String password;
-    String gender;
-    int age;
-    String phoneNumber;
-    Date creationDate;
+    private String name;
+    private String email;
+    private String password;
+    private String gender;
+    private int age;
+    private String phoneNumber;
+
+    @CreationTimestamp
+    private Date creationDate;
 
 }
