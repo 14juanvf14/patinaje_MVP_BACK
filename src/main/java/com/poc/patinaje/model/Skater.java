@@ -1,4 +1,4 @@
-package com.poc.patinaje.models;
+package com.poc.patinaje.model;
 
 import jakarta.persistence.Entity;
 import lombok.*;
