@@ -1,19 +1,20 @@
 package com.poc.patinaje.models;
 
-
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
 @Data
 @SuperBuilder
+@AllArgsConstructor
 @NoArgsConstructor
 public abstract class User {
     @Id
@@ -28,6 +29,5 @@ public abstract class User {
     private String phoneNumber;
 
     @CreationTimestamp
-    private Date creationDate;
-
+    private LocalDateTime creationDate;
 }
