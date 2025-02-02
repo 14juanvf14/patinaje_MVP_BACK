@@ -1,9 +1,6 @@
 package com.poc.patinaje.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,6 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Table(name = "roller_rinks")
 public class RollerRink {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
