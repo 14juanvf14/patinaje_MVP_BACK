@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TrainingTimeRepository extends JpaRepository<TrainingTime, Integer> {
+public interface TrainingTimeRepository extends JpaRepository<TrainingTime, Long> {
 }

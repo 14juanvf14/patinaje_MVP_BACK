@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RollerRinkRepository extends JpaRepository<RollerRink, Integer> {
+public interface RollerRinkRepository extends JpaRepository<RollerRink, Long> {
 }
